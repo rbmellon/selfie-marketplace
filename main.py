@@ -40,6 +40,7 @@ class UploadPage(webapp2.RequestHandler):
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
         seed_db.SeedData()
+        self.response.write("Seed Data Successful")
 
 # the app configuration section
 app = webapp2.WSGIApplication([
