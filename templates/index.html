@@ -12,7 +12,10 @@
 		  	<h3>
 		  		{{ selfie.title }}
 		  	</h3>
-		  	<img src="{{ selfie.source }}">
+		  	<h4>
+		  		User: {{ selfie.user }}
+		  	</h4>
+		  	<img src="{{ selfie.image }}">
 		  </li>
 		{% endfor %}
 	</ul>
