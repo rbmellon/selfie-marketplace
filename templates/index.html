@@ -8,8 +8,14 @@
 	<h2>List of Selfies</h2>
 	<ul>
 		{% for selfie in selfies %}
-		  <li>{{ selfie.title }}</li>
+		  <li>
+		  	<h3>
+		  		{{ selfie.title }}
+		  	</h3>
+		  	<img src="{{ selfie.source }}">
+		  </li>
 		{% endfor %}
 	</ul>
+	<a href="/new">Upload a selfie to sell or trade on the marketplace</a>>
 </body>
-</html>>
+</html>
