@@ -3,6 +3,7 @@ import webapp2
 import jinja2
 import os
 
+import seed_db
 from selfie_models import Selfie
 
 env = jinja2.Environment(
@@ -38,11 +39,11 @@ class UploadPage(webapp2.RequestHandler):
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
-        seed_data()
+        seed_db.SeedData()
 
 # the app configuration section
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/new', UploadPage),
-    ('/init', LoadDataHandler)
+    ('/init', LoadDataHandler),
 ], debug=True)

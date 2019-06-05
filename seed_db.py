@@ -1,3 +1,4 @@
-from selfie_models import User, Selfie
+from selfie_models import Selfie
 
-Selfie(title='Working Hard', image='https://i.imgur.com/Rpj8BCx.jpg', user='Nate', price=29.99)
+def SeedData():
+    Selfie(title='Working Hard', image='https://i.imgur.com/Rpj8BCx.jpg', user='Nate', price=29.99)
