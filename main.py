@@ -33,6 +33,11 @@ class UploadPage(webapp2.RequestHandler):
           'user': self.request.get("user"),
           'price': self.request.get("price")
         }
+        Selfie(
+          title=contents['title'],
+          image=contents['image'],
+          user=contents['user'],
+          price=contents['price']).put()
         self.response.headers['Content-Type'] = 'text/html'
         template = env.get_template("templates/upload.html")
         self.response.write(template.render(contents)) #the response
