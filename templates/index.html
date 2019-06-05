@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selfie Marketplace</title>
+</head>
+<body>
+	<h1>Welcome to the World Famous Selfie Marketplace</h1>
+	<h2>List of Selfies</h2>
+	<ul>
+		{% for selfie in selfies %}
+		  <li>{{ selfie.title }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>>
